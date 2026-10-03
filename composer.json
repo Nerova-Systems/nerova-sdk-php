@@ -1,0 +1,42 @@
+{
+  "name": "nerova/sdk",
+  "description": "Server-side PHP client for the Nerova stable tenant-v1 API.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "nerova",
+    "bookings",
+    "receptionist",
+    "api-client"
+  ],
+  "homepage": "https://docs.nerovasystems.com",
+  "authors": [
+    {
+      "name": "Nerova Systems"
+    }
+  ],
+  "support": {
+    "docs": "https://docs.nerovasystems.com",
+    "source": "https://github.com/Nerova-Systems/nerova-sdk-php"
+  },
+  "require": {
+    "php": "^8.2",
+    "microsoft/kiota-abstractions": "^1.5 || ^2.1",
+    "microsoft/kiota-http-guzzle": "^1.5 || ^2.1",
+    "microsoft/kiota-serialization-json": "^1.5 || ^2.1",
+    "microsoft/kiota-serialization-text": "^1.5 || ^2.1",
+    "microsoft/kiota-serialization-form": "^1.5 || ^2.1",
+    "microsoft/kiota-serialization-multipart": "^1.5 || ^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Nerova\\Sdk\\": "generated/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true,
+      "tbachert/spi": true
+    }
+  }
+}
