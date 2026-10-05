@@ -8,6 +8,7 @@ use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
+use Nerova\Sdk\Api\V1\Tenants\Item\Channels\Whatsapp\WhatsappRequestBuilder;
 use Nerova\Sdk\Models\PartnerRuntimeChannelsResponse;
 use Nerova\Sdk\Models\ProblemDetails;
 
@@ -16,6 +17,13 @@ use Nerova\Sdk\Models\ProblemDetails;
 */
 class ChannelsRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * The whatsapp property
+    */
+    public function whatsapp(): WhatsappRequestBuilder {
+        return new WhatsappRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new ChannelsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

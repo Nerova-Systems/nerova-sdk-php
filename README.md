@@ -9,7 +9,7 @@ persistent credential storage. Never ship an API key to a browser or a mobile
 app.
 
 ```bash
-composer require nerova/sdk:0.3.0-beta.2
+composer require nerova/sdk:0.3.0-beta.3
 ```
 
 The Composer package is `nerova/sdk` (on [Packagist](https://packagist.org/packages/nerova/sdk)),
@@ -21,9 +21,9 @@ multipart serializers) as regular dependencies. Composer may ask once whether to
 ## Versioning
 
 The SDK shares one version line with `@nerova/sdk` and `Nerova.Sdk`
-(currently `0.3.0-preview.2`). Composer has no `preview` stability, so a
-`-preview.N` suffix is published as a `-beta.N` Git tag: `0.3.0-preview.2` is
-`v0.3.0-beta.2`, and `0.3.0-preview.3` will be `v0.3.0-beta.3`. A stable
+(currently `0.3.0-preview.3`). Composer has no `preview` stability, so a
+`-preview.N` suffix is published as a `-beta.N` Git tag: `0.3.0-preview.3` is
+`v0.3.0-beta.3`, and `0.3.0-preview.4` will be `v0.3.0-beta.4`. A stable
 release keeps the bare `X.Y.Z` (`v0.3.0`). Composer skips pre-releases unless you
 name one (as above) or allow the stability, for example
 `composer require nerova/sdk:^0.3@beta`. The API surface may change before 1.0, so pin

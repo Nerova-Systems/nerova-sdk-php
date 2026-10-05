@@ -23,6 +23,7 @@ use Nerova\Sdk\Api\V1\Tenants\Item\Notifications\NotificationsRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Performance\PerformanceRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Usage\UsageRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Webhooks\WebhooksRequestBuilder;
+use Nerova\Sdk\Api\V1\Tenants\Item\Widgets\WidgetsRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Work\WorkRequestBuilder;
 use Nerova\Sdk\Models\ProblemDetails;
 use Nerova\Sdk\Models\TenantV1Response;
@@ -136,6 +137,13 @@ class WithTenantItemRequestBuilder extends BaseRequestBuilder
     */
     public function webhooks(): WebhooksRequestBuilder {
         return new WebhooksRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * The widgets property
+    */
+    public function widgets(): WidgetsRequestBuilder {
+        return new WidgetsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
