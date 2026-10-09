@@ -9,9 +9,7 @@ use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
 use Nerova\Sdk\Api\V1\Tenants\Item\Webhooks\Catalog\CatalogRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Webhooks\Deliveries\DeliveriesRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Webhooks\Item\WithWebhookItemRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Webhooks\Stats\StatsRequestBuilder;
 use Nerova\Sdk\Models\CreateTenantV1WebhookRequest;
 use Nerova\Sdk\Models\ProblemDetails;
 use Nerova\Sdk\Models\TenantV1WebhookResponse;
@@ -26,20 +24,6 @@ class WebhooksRequestBuilder extends BaseRequestBuilder
     */
     public function catalog(): CatalogRequestBuilder {
         return new CatalogRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The deliveries property
-    */
-    public function deliveries(): DeliveriesRequestBuilder {
-        return new DeliveriesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The stats property
-    */
-    public function stats(): StatsRequestBuilder {
-        return new StatsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

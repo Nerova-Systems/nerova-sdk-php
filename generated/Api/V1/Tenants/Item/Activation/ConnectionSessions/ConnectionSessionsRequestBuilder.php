@@ -8,7 +8,6 @@ use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Nerova\Sdk\Api\V1\Tenants\Item\Activation\ConnectionSessions\Item\WithSessionItemRequestBuilder;
 use Nerova\Sdk\Models\PartnerActivationConnectionSessionRequest;
 use Nerova\Sdk\Models\PartnerActivationConnectionSessionResponse;
 use Nerova\Sdk\Models\ProblemDetails;
@@ -18,17 +17,6 @@ use Nerova\Sdk\Models\ProblemDetails;
 */
 class ConnectionSessionsRequestBuilder extends BaseRequestBuilder 
 {
-    /**
-     * Gets an item from the Nerova/Sdk.api.v1.tenants.item.activation.connectionSessions.item collection
-     * @param string $sessionId Unique identifier of the item
-     * @return WithSessionItemRequestBuilder
-    */
-    public function bySessionId(string $sessionId): WithSessionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['sessionId'] = $sessionId;
-        return new WithSessionItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new ConnectionSessionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

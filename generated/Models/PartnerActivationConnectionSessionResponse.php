@@ -15,11 +15,6 @@ class PartnerActivationConnectionSessionResponse implements Parsable
     private ?string $audience = null;
     
     /**
-     * @var string|null $callbackPath The callbackPath property
-    */
-    private ?string $callbackPath = null;
-    
-    /**
      * @var PartnerActivationChannel|null $channel The channel property
     */
     private ?PartnerActivationChannel $channel = null;
@@ -97,14 +92,6 @@ class PartnerActivationConnectionSessionResponse implements Parsable
     }
 
     /**
-     * Gets the callbackPath property value. The callbackPath property
-     * @return string|null
-    */
-    public function getCallbackPath(): ?string {
-        return $this->callbackPath;
-    }
-
-    /**
      * Gets the channel property value. The channel property
      * @return PartnerActivationChannel|null
     */
@@ -136,7 +123,6 @@ class PartnerActivationConnectionSessionResponse implements Parsable
         $o = $this;
         return  [
             'audience' => fn(ParseNode $n) => $o->setAudience($n->getStringValue()),
-            'callbackPath' => fn(ParseNode $n) => $o->setCallbackPath($n->getStringValue()),
             'channel' => fn(ParseNode $n) => $o->setChannel($n->getEnumValue(PartnerActivationChannel::class)),
             'correlationId' => fn(ParseNode $n) => $o->setCorrelationId($n->getStringValue()),
             'expiresAt' => fn(ParseNode $n) => $o->setExpiresAt($n->getDateTimeValue()),
@@ -230,7 +216,6 @@ class PartnerActivationConnectionSessionResponse implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('audience', $this->getAudience());
-        $writer->writeStringValue('callbackPath', $this->getCallbackPath());
         $writer->writeEnumValue('channel', $this->getChannel());
         $writer->writeStringValue('correlationId', $this->getCorrelationId());
         $writer->writeDateTimeValue('expiresAt', $this->getExpiresAt());
@@ -251,14 +236,6 @@ class PartnerActivationConnectionSessionResponse implements Parsable
     */
     public function setAudience(?string $value): void {
         $this->audience = $value;
-    }
-
-    /**
-     * Sets the callbackPath property value. The callbackPath property
-     * @param string|null $value Value to set for the callbackPath property.
-    */
-    public function setCallbackPath(?string $value): void {
-        $this->callbackPath = $value;
     }
 
     /**

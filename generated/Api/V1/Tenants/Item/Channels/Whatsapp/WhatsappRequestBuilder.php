@@ -8,7 +8,6 @@ use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Nerova\Sdk\Api\V1\Tenants\Item\Channels\Whatsapp\Onboarding\OnboardingRequestBuilder;
 use Nerova\Sdk\Models\ProblemDetails;
 
 /**
@@ -16,13 +15,6 @@ use Nerova\Sdk\Models\ProblemDetails;
 */
 class WhatsappRequestBuilder extends BaseRequestBuilder 
 {
-    /**
-     * The onboarding property
-    */
-    public function onboarding(): OnboardingRequestBuilder {
-        return new OnboardingRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * Instantiates a new WhatsappRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

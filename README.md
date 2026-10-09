@@ -9,7 +9,7 @@ persistent credential storage. Never ship an API key to a browser or a mobile
 app.
 
 ```bash
-composer require nerova/sdk:0.3.0-beta.3
+composer require nerova/sdk:0.4.0-beta.1
 ```
 
 The Composer package is `nerova/sdk` (on [Packagist](https://packagist.org/packages/nerova/sdk)),
@@ -21,10 +21,10 @@ multipart serializers) as regular dependencies. Composer may ask once whether to
 ## Versioning
 
 The SDK shares one version line with `@nerova/sdk` and `Nerova.Sdk`
-(currently `0.3.0-preview.3`). Composer has no `preview` stability, so a
-`-preview.N` suffix is published as a `-beta.N` Git tag: `0.3.0-preview.3` is
-`v0.3.0-beta.3`, and `0.3.0-preview.4` will be `v0.3.0-beta.4`. A stable
-release keeps the bare `X.Y.Z` (`v0.3.0`). Composer skips pre-releases unless you
+(currently `0.4.0-preview.1`). Composer has no `preview` stability, so a
+`-preview.N` suffix is published as a `-beta.N` Git tag: `0.4.0-preview.1` is
+`v0.4.0-beta.1`, and `0.4.0-preview.2` will be `v0.4.0-beta.2`. A stable
+release keeps the bare `X.Y.Z` (`v0.4.0`). Composer skips pre-releases unless you
 name one (as above) or allow the stability, for example
 `composer require nerova/sdk:^0.3@beta`. The API surface may change before 1.0, so pin
 the exact version.
@@ -109,7 +109,7 @@ compatibility rather than errors. List endpoints paginate with `unixms|id` curso
 
 Guides, the API reference, and support contacts are on
 [docs.nerovasystems.com](https://docs.nerovasystems.com). Start with the
-[quickstart](https://docs.nerovasystems.com/getting-started/quickstart) and the
+[quickstart](https://docs.nerovasystems.com/documentation/get-started/quickstart) and the
 [SDK overview](https://docs.nerovasystems.com/sdks).
 
 This repository is a read-only distribution of the package so that Packagist can serve it.

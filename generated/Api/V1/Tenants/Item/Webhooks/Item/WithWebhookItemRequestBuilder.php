@@ -8,10 +8,7 @@ use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Nerova\Sdk\Api\V1\Tenants\Item\Webhooks\Item\Pause\PauseRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Webhooks\Item\Resume\ResumeRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Webhooks\Item\RotateSecret\RotateSecretRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Webhooks\Item\Test\TestRequestBuilder;
 use Nerova\Sdk\Models\ProblemDetails;
 use Nerova\Sdk\Models\TenantV1WebhookResponse;
 use Nerova\Sdk\Models\UpdateTenantV1WebhookRequest;
@@ -23,31 +20,10 @@ use Psr\Http\Message\StreamInterface;
 class WithWebhookItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
-     * The pause property
-    */
-    public function pause(): PauseRequestBuilder {
-        return new PauseRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The resume property
-    */
-    public function resume(): ResumeRequestBuilder {
-        return new ResumeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * The rotateSecret property
     */
     public function rotateSecret(): RotateSecretRequestBuilder {
         return new RotateSecretRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The test property
-    */
-    public function test(): TestRequestBuilder {
-        return new TestRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

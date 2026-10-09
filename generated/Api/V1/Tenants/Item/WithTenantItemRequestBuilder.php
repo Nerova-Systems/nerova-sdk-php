@@ -9,22 +9,13 @@ use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
 use Nerova\Sdk\Api\V1\Tenants\Item\Activation\ActivationRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Activity\ActivityRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Capabilities\CapabilitiesRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Channels\ChannelsRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Connections\ConnectionsRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Conversations\ConversationsRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Employee\EmployeeRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Incidents\IncidentsRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Lifecycle\LifecycleRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Mandate\MandateRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Memory\MemoryRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Notifications\NotificationsRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Performance\PerformanceRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Usage\UsageRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Webhooks\WebhooksRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Widgets\WidgetsRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Work\WorkRequestBuilder;
 use Nerova\Sdk\Models\ProblemDetails;
 use Nerova\Sdk\Models\TenantV1Response;
 use Nerova\Sdk\Models\UpdateTenantV1Request;
@@ -42,20 +33,6 @@ class WithTenantItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * The activity property
-    */
-    public function activity(): ActivityRequestBuilder {
-        return new ActivityRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The capabilities property
-    */
-    public function capabilities(): CapabilitiesRequestBuilder {
-        return new CapabilitiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * The channels property
     */
     public function channels(): ChannelsRequestBuilder {
@@ -70,27 +47,6 @@ class WithTenantItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * The conversations property
-    */
-    public function conversations(): ConversationsRequestBuilder {
-        return new ConversationsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The employee property
-    */
-    public function employee(): EmployeeRequestBuilder {
-        return new EmployeeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The incidents property
-    */
-    public function incidents(): IncidentsRequestBuilder {
-        return new IncidentsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * The lifecycle property
     */
     public function lifecycle(): LifecycleRequestBuilder {
@@ -98,31 +54,10 @@ class WithTenantItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * The mandate property
-    */
-    public function mandate(): MandateRequestBuilder {
-        return new MandateRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The memory property
-    */
-    public function memory(): MemoryRequestBuilder {
-        return new MemoryRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * The notifications property
     */
     public function notifications(): NotificationsRequestBuilder {
         return new NotificationsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The performance property
-    */
-    public function performance(): PerformanceRequestBuilder {
-        return new PerformanceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -144,13 +79,6 @@ class WithTenantItemRequestBuilder extends BaseRequestBuilder
     */
     public function widgets(): WidgetsRequestBuilder {
         return new WidgetsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The work property
-    */
-    public function work(): WorkRequestBuilder {
-        return new WorkRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

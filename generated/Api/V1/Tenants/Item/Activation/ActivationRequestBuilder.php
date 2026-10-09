@@ -12,11 +12,7 @@ use Nerova\Sdk\Api\V1\Tenants\Item\Activation\IdentityConfirmations\IdentityConf
 use Nerova\Sdk\Api\V1\Tenants\Item\Activation\Mandate\MandateRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Activation\Manifest\ManifestRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Activation\Pause\PauseRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Activation\Preview\PreviewRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Activation\Provisioning\ProvisioningRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Activation\Receipts\ReceiptsRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Activation\Reconcile\ReconcileRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Activation\Suspend\SuspendRequestBuilder;
 
 /**
  * Builds and executes requests for operations under /api/v1/tenants/{tenantId}/activation
@@ -80,38 +76,10 @@ class ActivationRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * The preview property
-    */
-    public function preview(): PreviewRequestBuilder {
-        return new PreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * The provisioning property
     */
     public function provisioning(): ProvisioningRequestBuilder {
         return new ProvisioningRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The receipts property
-    */
-    public function receipts(): ReceiptsRequestBuilder {
-        return new ReceiptsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The reconcile property
-    */
-    public function reconcile(): ReconcileRequestBuilder {
-        return new ReconcileRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The suspend property
-    */
-    public function suspend(): SuspendRequestBuilder {
-        return new SuspendRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

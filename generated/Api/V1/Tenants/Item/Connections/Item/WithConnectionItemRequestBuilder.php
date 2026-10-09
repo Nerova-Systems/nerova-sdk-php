@@ -8,9 +8,7 @@ use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Nerova\Sdk\Api\V1\Tenants\Item\Connections\Item\BaseUrl\BaseUrlRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Connections\Item\Credential\CredentialRequestBuilder;
-use Nerova\Sdk\Api\V1\Tenants\Item\Connections\Item\Test\TestRequestBuilder;
 use Nerova\Sdk\Api\V1\Tenants\Item\Connections\Item\Verify\VerifyRequestBuilder;
 use Nerova\Sdk\Models\ProblemDetails;
 use Nerova\Sdk\Models\TenantV1ConnectionResponse;
@@ -22,24 +20,10 @@ use Psr\Http\Message\StreamInterface;
 class WithConnectionItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
-     * The baseUrl property
-    */
-    public function baseUrl(): BaseUrlRequestBuilder {
-        return new BaseUrlRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * The credential property
     */
     public function credential(): CredentialRequestBuilder {
         return new CredentialRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * The test property
-    */
-    public function test(): TestRequestBuilder {
-        return new TestRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
